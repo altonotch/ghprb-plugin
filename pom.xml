@@ -56,7 +56,7 @@
             <dependency>
                 <groupId>io.jenkins.tools.bom</groupId>
                 <artifactId>bom-2.387.x</artifactId>
-                <version>2329.v078520e55c19</version>
+                <version>2483.v3b_22f030990a_</version>
                 <scope>import</scope>
                 <type>pom</type>
             </dependency>
@@ -75,13 +75,15 @@
     </profiles>
 
     <dependencies>
-
         <!-- added dependencies because of maven enforcer plugin -->
 
-        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/scm-api -->
+        <!-- end dependencies because of maven enforcer plugin   -->
+
+        <!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
         <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>scm-api</artifactId>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.16.0</version>
         </dependency>
 
         <dependency>
@@ -94,45 +96,7 @@
             <artifactId>annotation-indexer</artifactId>
             <version>1.17</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/script-security -->
-        <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>script-security</artifactId>
-        </dependency>
-<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.groovy/groovy-all &ndash;&gt;-->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.groovy</groupId>-->
-<!--            <artifactId>groovy-all</artifactId>-->
-<!--            <version>4.0.15</version>-->
-<!--            <type>pom</type>-->
-<!--        </dependency>-->
 
-        <dependency>
-            <groupId>org.apache.ant</groupId>
-            <artifactId>ant</artifactId>
-            <version>1.10.14</version>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-utils</artifactId>
-            <version>4.0.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.codehaus.plexus</groupId>
-            <artifactId>plexus-classworlds</artifactId>
-            <version>2.7.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>bouncycastle-api</artifactId>
-        </dependency>
-
-        <!-- end added dependencies because of maven enforcer plugin -->
-
-        <dependency>
-            <groupId>com.coravy.hudson.plugins.github</groupId>
-            <artifactId>github</artifactId>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/matrix-project -->
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
@@ -149,12 +113,45 @@
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>git</artifactId>
         </dependency>
+
         <dependency>
             <groupId>org.jenkins-ci.plugins</groupId>
             <artifactId>job-dsl</artifactId>
             <version>1.63</version>
             <optional>true</optional>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/token-macro -->
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>token-macro</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/credentials -->
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>credentials</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/plain-credentials -->
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>plain-credentials</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/structs -->
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>structs</artifactId>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/github-branch-source -->
+        <dependency>
+            <groupId>org.jenkins-ci.plugins</groupId>
+            <artifactId>github-branch-source</artifactId>
+            <version>1734.v8a_ed3a_653490</version>
+        </dependency>
+
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
@@ -185,11 +182,6 @@
             <version>${powermock.version}</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/token-macro -->
-        <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>token-macro</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>com.cloudbees.plugins</groupId>
@@ -197,24 +189,6 @@
             <version>0.20</version>
             <optional>true</optional>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/credentials -->
-        <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>credentials</artifactId>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/plain-credentials -->
-        <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>plain-credentials</artifactId>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.jenkins-ci.plugins/structs -->
-        <dependency>
-            <groupId>org.jenkins-ci.plugins</groupId>
-            <artifactId>structs</artifactId>
-        </dependency>
-
     </dependencies>
 
     <build>
